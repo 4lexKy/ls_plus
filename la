@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Copyright 2026 Tu Nombre y colaboradores
+# SPDX-License-Identifier: GPL-2.0-only
+# Este programa es software libre: puedes redistribuirlo y/o modificarlo bajo los términos
+# de la Licencia Pública General GNU como publicada por la Free Software Foundation,
+# ya sea la versión 2 de la Licencia, o (a tu elección) cualquier versión posterior.
+
+# Alex      05.04.2023
+#           18.04.2024
+#           13.03.2026 (añadida opción -p (/) y --gr...(dir primero))
+#           24.04.2026 (añadida -h, muestra tamaño para humanos)
+#           09.05.2026 (añadido --color=always a todas las versiones, la, ll, lla y laa
+#           09.05.2026 (quitado -p añadido -F (muestra /,*,=,... segun el tipo), la, ll, lla y laa
+#           05.09.2026 (sol. varios dirs con espacios $* > "$@")
+# ult. mod. 09.10.2026 (ahora la no muestra ocultos, rol intercambiado con laa)
+
+#Script para usar "la", en vez de "ls -la"
+#Muestra directorios con / al final -> directorio/
+#Muestra orden alfabético, primero carpetas, luego ficheros.
+
+if [ $# == 0 ]; then
+    ls -lh -F --group-directories-first --color=always
+else
+    ls -lh -F --group-directories-first --color=always "$@"
+    #  $*  > Añade los argumentos uno a uno separados por espacios.
+    #            ./en\ ello/ ./plantillas/ => ./en ello/ ./plantillas (3 args)
+    # "$*" > Convierte todos argumentos en 1 solo string separado por espacios.
+    #            ./en\ ello/ ./plantillas/ => "./en ello/ ./plantillas" (1 arg)
+    #  $@  > Igual que $*
+    # "$@" > Cada argumento se convete en una palabra independiente.
+    #            ./en\ ello/ ./plantillas/ => "./en ello/" "./plantillas" (2 args)
+fi

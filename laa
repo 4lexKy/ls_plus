@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Copyright 2026 Tu Nombre y colaboradores
+# SPDX-License-Identifier: GPL-2.0-only
+# Este programa es software libre: puedes redistribuirlo y/o modificarlo bajo los términos
+# de la Licencia Pública General GNU como publicada por la Free Software Foundation,
+# ya sea la versión 2 de la Licencia, o (a tu elección) cualquier versión posterior.
+
+# Alex      14.04.2026 (fork de 'la' a 'laa')
+#           14.04.2026 (laa no muestra archivos ocultos)
+#           24.04.2026 (añadida -h, muestra tamaño para humanos)
+# ult. mod. 09.10.2026 (ahora laa muestra archivos ocultos i llama a la)
+
+#Script para usar "la", en vez de "ls -la"
+#Muestra directorios con / al final -> directorio/
+#Muestra orden alfabético, primero carpetas, luego ficheros.
+
+echo -n "  >>Con elementos ocultos<<  ---  "
+if [ $# == 0 ]; then
+    la -a
+else
+    la -a "$@"
+fi

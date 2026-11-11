@@ -1,4 +1,4 @@
-[Versión 0.6.2]: #
+[Versión 0.7.2]: #
 # ls_plus - Colección de wrappers para mejorar y acelerar el uso de ls
 
 Este repositorio contiene varios wrappers que llaman directamente a "ls" pero con configuraciones que habitualmente no se usan pero que son útiles. Para usarlas facilmente se han desarrollado estos scripts.
@@ -8,6 +8,12 @@ Este repositorio contiene varios wrappers que llaman directamente a "ls" pero co
 - Los scripts existentes funcionan y actualmente estan siendo usados.
 - A muchos de ellos se les pueden mejorar detalles menores.
 - A medida que se necesiten nuevos se iran añadiendo y mejorando.
+
+### Ficheros
+- Scripts*: la lad, laf, lap, laa, laad, laaf, laap, ll, lsd
+- LICENSE: contenido de la licencia
+- README.md: información del proyecto
+- .gitignore: define elementos a ignorar
 
 ---
 ## Instalación
@@ -60,7 +66,9 @@ Para un uso mas ágil se puede crear una carpeta para script de forma que todos 
 
 Esto se puede conseguir añadiendo a ~/.bashrc la línea:
 
->export PATH=$PATH:/ruta/a/carpeta/con/scripts
+```bash
+    export PATH=$PATH:/ruta/a/carpeta/con/scripts
+```
 
 ---
 ## Licencia
@@ -68,6 +76,8 @@ Este proyecto está licenciado bajo GPLv2 - consulta el archivo LICENSE para má
 
 ---
 ## Autor
->[Alex](github.com/4lexKy)
+>**Alex**
+- Github: [https://github.com/4lexKy](https://github.com/4lexKy)
+- Email: [alex.correu@pm.me](mailto:alex.correu@pm.me)
 
 ---
